@@ -19,21 +19,18 @@ sudo mkdir -p $BOT_DIR
 sudo chown $USER:$USER $BOT_DIR
 
 # Clone repository
+# Default repo URL (can be overridden)
+DEFAULT_REPO_URL="https://github.com/EugeneKrokhmal/telegram-bot.git"
+
 # You can either:
 # 1. Set REPO_URL as environment variable: export REPO_URL="https://github.com/username/repo.git"
 # 2. Pass it as argument: ./setup_bot_server.sh https://github.com/username/repo.git
-# 3. Or edit this script and set it below
+# 3. Use default (EugeneKrokhmal/telegram-bot)
 if [ -z "$REPO_URL" ] && [ -n "$1" ]; then
     REPO_URL="$1"
-fi
-
-if [ -z "$REPO_URL" ]; then
-    echo "⚠️  REPO_URL not set!"
-    echo "Please provide your GitHub repository URL:"
-    echo "  Option 1: export REPO_URL='https://github.com/username/repo.git' && ./setup_bot_server.sh"
-    echo "  Option 2: ./setup_bot_server.sh https://github.com/username/repo.git"
-    echo "  Option 3: Edit this script and set REPO_URL variable"
-    exit 1
+elif [ -z "$REPO_URL" ]; then
+    REPO_URL="$DEFAULT_REPO_URL"
+    echo "📦 Using default repository: $REPO_URL"
 fi
 
 echo "📥 Cloning repository from $REPO_URL..."
