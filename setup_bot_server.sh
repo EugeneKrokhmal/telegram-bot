@@ -20,6 +20,7 @@ sudo chown $USER:$USER $BOT_DIR
 
 # Clone repository
 # Default repo URL (can be overridden)
+# Supports both HTTPS and SSH formats
 DEFAULT_REPO_URL="https://github.com/EugeneKrokhmal/telegram-bot.git"
 
 # You can either:
