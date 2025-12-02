@@ -1,0 +1,6 @@
+python-telegram-bot==22.5
+openai>=2.0.0
+python-dotenv>=1.0.0
+duckduckgo-search>=6.0.0
+langdetect>=1.0.9
+
