@@ -19,3 +19,12 @@ __pycache__/
 *.swp
 *.swo
 
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# AWS
+*.pem
+telegram-bot-key.pem
+
