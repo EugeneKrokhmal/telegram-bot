@@ -30,9 +30,9 @@ fi
 # Configuration
 KEY_NAME="telegram-bot-key"
 INSTANCE_NAME="telegram-bot-server"
-AMI_ID="ami-0c55b159cbfafe1f0"  # Ubuntu 22.04 LTS (us-east-1) - update for your region
+AMI_ID="ami-0c55b159cbfafe1f0"  # Ubuntu 22.04 LTS - will auto-detect for us-east-2
 INSTANCE_TYPE="t2.micro"
-REGION="us-east-1"  # Change to your preferred region
+REGION="us-east-2"  # Your AWS region
 
 echo "📋 Deployment Configuration:"
 echo "  Key Pair: $KEY_NAME"

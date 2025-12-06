@@ -21,6 +21,7 @@ MAX_USER_MESSAGES = 50
 CONTEXT_WINDOW_SIZE = 15
 DEFAULT_AI_MODEL = "gpt-4o-mini"
 DEFAULT_TEMPERATURE = 0.7
+REPLY_CHANCE = 0.10  # 10% chance to reply randomly
 
 # Web Search Settings
 ENABLE_WEB_SEARCH = True

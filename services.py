@@ -20,6 +20,7 @@ from config import (
     ENABLE_STICKERS,
     STICKER_CHANCE,
     STICKER_SET_NAME,
+    REPLY_CHANCE,
     logger,
 )
 from models import Message, UserProfile
@@ -192,7 +193,7 @@ class AIService:
             should_reply = decision.startswith("YES")
 
             # Add some randomness for natural conversation flow (even if AI says no, sometimes reply)
-            if not should_reply and random.random() < 0.15:  # 15% chance to reply anyway
+            if not should_reply and random.random() < REPLY_CHANCE:
                 logger.info("Randomly engaging in conversation for natural flow")
                 return True
 
